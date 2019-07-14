@@ -1,0 +1,12 @@
+{% extends 'includes/base.html'%}
+{% block content %}
+
+
+{% include 'includes/header.html' %}
+<br>
+<div class="container text-center" xmlns="">
+    <h1 class="">Hi, <strong class="text-success">{{u.username}}</strong></h1>
+     <p> Welcome to Your Admin Pannel</p>
+     <a  href="{% url 'show-pdf'%}" class="btn btn-info text-white">Go to Download File</a>
+</div>
+{% endblock%}

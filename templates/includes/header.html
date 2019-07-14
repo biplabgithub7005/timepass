@@ -1,0 +1,21 @@
+<!--  Start header -->
+<header class="bg-light">
+    <div class="container">
+        {% include 'includes/navbar.html' %}
+
+    </div>
+    <!-- write your Here -->
+</header>
+<br>
+<!--  End header -->
+
+{% if messages %}
+    <ul class="messages alert alert-danger">
+        {% for message in messages %}
+        <li
+        {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+

@@ -1,0 +1,40 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand animated  bounce delay-2s" href=""><i class="fas fa-grip-horizontal " id="showcat"></i>  <span class="logo">FACEBOOK</span></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+
+
+
+                </ul>
+                <div class="drop">
+			<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+            <b class="text-info"></b><i class="fas fa-user-circle"></i>
+        </button>
+
+        <div class="dropdown-menu  dropdown-menu-right">
+            <a class="dropdown-item" href="{% url 'dashboard'%}">Dashboard</a>
+            <a class="dropdown-item" href="{% url 'change_password'%}">Change Password</a>
+            <a class="dropdown-item" href="{% url 'profile'%}"> Profile</a>
+
+            <a class="dropdown-item" href="{% url 'logout'%}">Logout</a>
+        </div>
+		</div>
+
+
+            </div>
+
+
+        </nav>
+

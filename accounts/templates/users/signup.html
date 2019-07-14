@@ -1,0 +1,25 @@
+{% extends 'includes/base.html'%}
+{% block content %}
+<div id="bglogin">
+<div class="container">
+    <div class="box1">
+        <div class="">
+            <h1 class="login100-form-title p-b-37">Register Form</h1>
+            <form id="idForm" method="post">
+                {% csrf_token%}
+                <div class="table">
+                    {{form}}
+                </div>
+                <button type="submit" class="btn btn-success col-md-12">Ragister</button>
+                <br>
+
+
+            </form>
+            <br>
+            I don't have Account <a href="{% url 'login'%}">Login</a> here
+        </div>
+    </div>
+</div>
+    </div>
+{% endblock%}
+

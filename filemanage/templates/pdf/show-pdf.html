@@ -1,0 +1,48 @@
+{% extends 'includes/base.html'%}
+
+{% block title %}
+<title>Home</title>
+{% endblock %}
+
+{% block content %}
+{% include 'includes/header.html' %}
+
+
+<div class="pdf-section">
+    <br><br><br>
+    <div class="container"><br>
+        <a href="" class="btn btn-info">DJANGO - PROJECTS - FILES</a>
+
+        <div class="pdf-box">
+<br>
+            <table class="table">
+                <thead class="bg-danger text-white">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">File Name</th>
+                    <th scope="col"> date</th>
+                    <th scope="col">File</th>
+
+                    <th scope="col">Download</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for p in pdf %}
+                <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td><h3 class="text-primary">{{p.file_name}}</h3>
+                        <span class="text-muted">{{p.file_desc}}</span>
+                    </td>
+                    <td>{{p.file_date}}</td>
+                    {% load static %}
+                    <td><img src="{% static 'images/pdf-icon.png'%}" width="40px"></td>
+                    <td><a href="{{p.file_path.url}}" class="btn btn-success"> <i class="fa fa-download" aria-hidden="true"> Download</i></a></td>
+                </tr>
+                {%endfor%}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

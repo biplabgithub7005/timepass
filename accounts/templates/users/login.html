@@ -1,0 +1,36 @@
+{% extends 'includes/base.html'%}
+{% block content %}
+
+<div id="bglogin">
+<div class="container">
+    <br><br>
+    <div class="box1">
+        <div class="">
+
+            <h1 class="login100-form-title p-b-37">Login Form</h1>
+            <form id="idForm" method="post">
+                {% csrf_token%}
+                <div class="table">
+                    {{form}}
+                </div>
+                <button type="submit" class="btn btn-success col-md-12">Login</button>
+
+            </form>
+            <br>
+            <span class="text-muted">I don't have Account</span> <a href="{% url 'signup'%}">Create an Account</a> here
+            <div><span class="text-muted">Forget Password?</span> <a href="{% url 'reset_password'%}" class="btn btn-danger col-md-12"> Reset Your Account</a></div>
+
+             <br>
+             <div class="row col-md-12">
+
+                <a href="{% url 'signup'%}" class="btn btn-primary col-md-6">Instagram</a>
+                <a href="{% url 'signup'%}" class="btn btn-info col-md-6" style="float:right;">Github</a>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+    </div>
+{% endblock%}
+

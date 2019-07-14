@@ -1,0 +1,24 @@
+{% extends 'includes/base.html'%}
+{% block content %}
+
+
+{% include 'includes/header.html' %}
+<div class="container">
+<br>
+    <h1>hello,<span class="text-success">{{login_usr.username}}</span>!</h1>
+    <div class="">
+        <img src="{{p.image.url}}" alt="{{p.image.url}}" width="400px">
+        <h1>First Name: {{p.fname}}</h1>
+        <h1>Last Name: {{p.lname}}</h1>
+        <h1>gender: {{p.gender}}</h1>
+
+    </div>
+
+
+
+
+<p><a href="{% url 'update_profile'%}">Edit Account</a> </p>
+
+
+    </div>
+{% endblock%}
